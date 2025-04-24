@@ -39,3 +39,7 @@ Thumbs.db
 **/.idea/
 .vscode
 .vagrant/
+
+
+plugins/zsh-autosuggestions/
+plugins/zsh-syntax-highlighting/
