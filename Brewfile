@@ -27,6 +27,7 @@ cask 'discord'
 cask 'fantastical'
 cask 'figma'
 cask 'firefox'
+cask 'ghostty' # Terminal emulator
 cask 'google-chrome'
 cask 'imageoptim'
 cask 'iterm2'
