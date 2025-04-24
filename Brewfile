@@ -1,7 +1,3 @@
-# Taps
-# tap 'homebrew/cask'
-# tap 'homebrew/bundle'
-
 # Binaries
 brew 'gh'
 brew 'git'
@@ -65,3 +61,4 @@ cask 'font-meslo-for-powerlevel10k'
 mas 'Amphetamine', id: 937984704
 mas 'Remote Mouse', id: 403195710
 mas 'Things', id: 904280696
+mas 'Monosnap', id: 540348655
