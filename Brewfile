@@ -20,6 +20,8 @@ brew 'powerlevel10k' # Prompt for Zsh
 # Apps
 cask '1password'
 cask 'alfred'
+# cask 'android-studio'
+cask 'claude' # AI assistant
 cask 'daisydisk'
 cask 'discord'
 cask 'fantastical'
