@@ -10,6 +10,7 @@ brew 'ripgrep' # Better grep
 # brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 
 # Development
+brew 'cocoapods' # iOS/macOS dependency manager
 brew 'fnm' # Node.js version manager
 brew 'imagemagick' # Image processing
 brew 'yarn' # Package manager
