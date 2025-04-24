@@ -6,6 +6,7 @@
 brew 'gh'
 brew 'git'
 brew 'mas' # Mac App Store manager
+brew 'ripgrep' # Better grep
 # brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 
 # Development
