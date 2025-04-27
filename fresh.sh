@@ -34,6 +34,10 @@ brew update
 brew tap homebrew/bundle
 brew bundle --file ./Brewfile
 
+# Ensure scripts are executable
+chmod +x keyboard-shortcuts.sh
+chmod +x zsh-plugins-setup.sh
+
 # Install Zsh plugins using the script
 echo "Installing Zsh plugins..."
 ./zsh-plugins-setup.sh
