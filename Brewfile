@@ -18,6 +18,7 @@ cask '1password'
 cask 'alfred'
 # cask 'android-studio'
 cask 'claude' # AI assistant
+cask 'cork' # GUI companion app for Homebrew
 cask 'daisydisk'
 cask 'discord'
 cask 'fantastical'
