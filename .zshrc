@@ -13,6 +13,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+
 # Path to your dotfiles.
 export DOTFILES=$HOME/.dotfiles
 
@@ -142,9 +143,11 @@ export LANG=en_US.UTF-8
 # Automatically configure fnm (Fast Node Manager) to switch Node.js versions based on the current directory.
 eval "$(fnm env --use-on-cd --shell zsh)"
 
-# Load Powerlevel10k theme for Zsh prompt customization and appearance.
-# This enhances the shell prompt with features like icons, git status, and more.
-source /usr/local/share/powerlevel10k/powerlevel10k.zsh-theme
+# # Load Powerlevel10k theme dynamically for Zsh prompt customization and appearance.
+# # This enhances the shell prompt with features like icons, git status, and more.
+if [[ -r "$(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" ]]; then
+  source "$(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme"
+fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
