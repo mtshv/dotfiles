@@ -3,6 +3,13 @@ brew 'gh'
 brew 'git'
 brew 'mas' # Mac App Store manager
 brew 'ripgrep' # Better grep
+brew 'bat' # Enhanced cat with syntax highlighting
+brew 'eza' # Modern ls replacement with colors and icons
+brew 'micro' # User-friendly terminal text editor
+brew 'btop' # Resource monitor with CPU, memory, disk usage
+brew 'duf' # Better disk usage analyzer
+brew 'tokei' # Code statistics (count lines, analyze languages)
+brew 'zoxide' # Smarter cd command that learns your habits
 # brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 
 # Development
