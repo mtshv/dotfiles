@@ -156,4 +156,6 @@ fi
 
 # Symlink created for Android Studio to use fnm-managed Node.js
 # Automatically resolves the current Node.js version managed by fnm
+# ⚠️ This line causes "ln: /usr/local/bin/node: No such file or directory" errors
+# ⚠️ Likely unnecessary with fnm — consider removing it
 # ln -s "$(realpath $(which node))" /usr/local/bin/node
