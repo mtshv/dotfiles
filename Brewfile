@@ -1,41 +1,50 @@
-# Binaries
-brew 'gh'
-brew 'git'
-brew 'mas' # Mac App Store manager
-brew 'ripgrep' # Better grep
-brew 'bat' # Enhanced cat with syntax highlighting
-brew 'eza' # Modern ls replacement with colors and icons
-brew 'micro' # User-friendly terminal text editor
-brew 'btop' # Resource monitor with CPU, memory, disk usage
-brew 'duf' # Better disk usage analyzer
-brew 'tokei' # Code statistics (count lines, analyze languages)
-brew 'zoxide' # Smarter cd command that learns your habits
-# brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
+# ==============================================================================
+# 1. BINARIES & CLI TOOLS
+# ==============================================================================
+brew 'bat'           # Enhanced cat with syntax highlighting
+brew 'btop'          # Resource monitor with CPU, memory, disk usage
+brew 'duf'           # Better disk usage analyzer
+brew 'eza'           # Modern ls replacement with colors and icons
+brew 'fd'            # Simple, fast alternative to 'find'
+brew 'gh'            # GitHub CLI
+brew 'git'           # Distributed version control system
+brew 'mas'           # Mac App Store manager
+brew 'micro'         # User-friendly terminal text editor
+brew 'ripgrep'       # Better grep (faster, smarter)
+brew 'tlrc'          # Rust client for tldr (simplified man pages)
+brew 'tokei'         # Code statistics (count lines, analyze languages)
+brew 'zoxide'        # Smarter cd command that learns your habits
 
-# Development
-brew 'cocoapods' # iOS/macOS dependency manager
-brew 'fnm' # Node.js version manager
-brew 'imagemagick' # Image processing
-brew 'yarn' # Package manager
-brew 'watchman' # File watching for React-Native
+# ==============================================================================
+# 2. DEVELOPMENT & SHELL
+# ==============================================================================
+brew 'cocoapods'     # iOS/macOS dependency manager
+brew 'fnm'           # Node.js version manager
+brew 'imagemagick'   # Image processing
 brew 'powerlevel10k' # Prompt for Zsh
+brew 'watchman'      # File watching for React Native
+brew 'yarn'          # JS package manager
 
-# Apps
+# ==============================================================================
+# 3. APPLICATIONS (CASKS)
+# ==============================================================================
 cask '1password'
 cask 'alfred'
-# cask 'android-studio'
-cask 'claude' # AI assistant
-cask 'cork' # GUI companion app for Homebrew
+cask 'android-studio'
+cask 'claude'               # AI assistant
+cask 'cork'                 # GUI companion app for Homebrew
 cask 'daisydisk'
 cask 'discord'
 cask 'fantastical'
 cask 'figma'
 cask 'firefox'
-cask 'ghostty' # Terminal emulator
+cask 'ghostty'              # Terminal emulator
 cask 'google-chrome'
 cask 'imageoptim'
 cask 'iterm2'
+cask 'jordanbaird-ice@beta' # Menu bar manager (Bartender alternative)
 cask 'postman'
+cask 'proxyman'             # Inspect network traffic
 cask 'send-to-kindle'
 cask 'slack'
 cask 'spotify'
@@ -47,16 +56,14 @@ cask 'transmission'
 cask 'transmit'
 cask 'visual-studio-code'
 cask 'vlc'
-cask 'whatsapp'
 cask 'webstorm'
+cask 'whatsapp'
 cask 'zoom'
-cask 'zulu@17' # Java 17 for Android Studio React Native Development
+cask 'zulu@17'              # Java 17 for React Native Android Dev
 
-# Quicklook
-# cask 'qlmarkdown'
-# cask 'quicklook-json'
-
-# Fonts
+# ==============================================================================
+# 4. FONTS
+# ==============================================================================
 cask 'font-meslo-for-powerlevel10k'
 # cask 'font-open-sans'
 # cask 'font-roboto'
@@ -65,9 +72,12 @@ cask 'font-meslo-for-powerlevel10k'
 # cask 'font-source-sans-pro'
 # cask 'font-source-serif-pro'
 
-# Mac App Store
-mas 'Amphetamine', id: 937984704
-mas 'Remote Mouse', id: 403195710
-mas 'Things', id: 904280696
-mas 'Monosnap', id: 540348655
+# ==============================================================================
+# 5. MAC APP STORE
+# ==============================================================================
+mas 'Amphetamine',    id: 937984704
+mas 'Monosnap',       id: 540348655
 mas 'Pixelmator Pro', id: 1289583905
+mas 'Remote Mouse',   id: 403195710
+mas 'Things',         id: 904280696
+mas 'Xcode',          id: 497799835
