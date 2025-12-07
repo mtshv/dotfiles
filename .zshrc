@@ -1,161 +1,127 @@
-# Set JAVA_HOME to the Azul Zulu JDK for React Native Android Development
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
-
-# Set Android SDK environment variables and update PATH for Android emulator and platform tools.
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-
+# ==============================================================================
+# 1. INSTANT PROMPT (CRITICAL: MUST BE AT THE VERY TOP)
+# ==============================================================================
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# ==============================================================================
+# 2. ENVIRONMENT VARIABLES
+# ==============================================================================
 
-# Path to your dotfiles.
-export DOTFILES=$HOME/.dotfiles
+# React Native Android: Azul Zulu JDK 17
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home"
 
-##### Oh My Zsh Auto-Generated #####
+# Android SDK
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export PATH="$PATH:$ANDROID_HOME/emulator"
+export PATH="$PATH:$ANDROID_HOME/platform-tools"
 
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+# Path to your dotfiles
+export DOTFILES="$HOME/.dotfiles"
 
-# Path to your Oh My Zsh installation.
+# Locale (Modern: LANG + LC_CTYPE, not LC_ALL)
+export LANG="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+
+# ==============================================================================
+# 3. HISTORY & ZSH OPTIONS
+# ==============================================================================
+
+# History file and size
+export HISTFILE="$HOME/.zsh_history"
+export HISTSIZE=50000
+export SAVEHIST=20000
+HIST_STAMPS="dd.mm.yyyy"
+
+# History behavior
+setopt HIST_IGNORE_DUPS           # Do not record immediately repeated commands
+setopt HIST_IGNORE_ALL_DUPS       # Remove older duplicate entries
+setopt HIST_FIND_NO_DUPS          # Do not show dupes during history search
+setopt SHARE_HISTORY              # Share history between sessions
+setopt INC_APPEND_HISTORY_TIME    # Append commands with timestamp as they are entered
+
+# Usability options
+setopt AUTO_CD                    # `cd` by just typing directory
+setopt INTERACTIVE_COMMENTS       # Allow comments in interactive commands
+setopt EXTENDED_GLOB              # Powerful globbing
+setopt NO_BEEP                    # No bell
+
+# ==============================================================================
+# 4. OH MY ZSH CONFIGURATION
+# ==============================================================================
+
+# Path to your Oh My Zsh installation
 export ZSH="$HOME/.oh-my-zsh"
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time Oh My Zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+# Theme: Leave empty because Powerlevel10k is loaded manually below
+# This prevents OMZ from loading a theme that gets immediately overwritten
+ZSH_THEME=""
 
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+# Use your dotfiles repo as the custom OMZ directory
+export ZSH_CUSTOM="$DOTFILES"
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+# Plugins (order matters: syntax-highlighting should be last)
+plugins=(
+  git
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+)
 
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+# Load Oh My Zsh
+source "$ZSH/oh-my-zsh.sh"
 
-# Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+# ==============================================================================
+# 5. NODE.JS VIA FNM (Fast Node Manager)
+# ==============================================================================
 
-# Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
-
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# You can also set it to another string to have that shown instead of the default red dots.
-# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-HIST_STAMPS="dd.mm.yyyy" # Outside US Format
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Set ZSH_CUSTOM to point to the dotfiles directory
-# This allows all custom Oh My Zsh plugins, themes, and configurations
-# to be managed within the $DOTFILES directory, making it easier to version
-# control and organize alongside other personal configuration files.
-ZSH_CUSTOM=$DOTFILES
-
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
-
-source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-
-# Set LC_ALL to enforce the same locale for all locale categories (e.g., time, numeric, collation, etc.)
-# This ensures that all applications and system services use en_US.UTF-8 settings across the board.
-export LC_ALL=en_US.UTF-8
-
-# Set LANG as the default locale setting. If specific LC_* variables (like LC_TIME) are not set, they will inherit this value.
-# However, with LC_ALL set, LANG is more of a fallback or informative value.
-export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='nvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch $(uname -m)"
-
-# Set personal aliases, overriding those provided by Oh My Zsh libs,
-# plugins, and themes. Aliases can be placed here, though Oh My Zsh
-# users are encouraged to define aliases within a top-level file in
-# the $ZSH_CUSTOM folder, with .zsh extension. Examples:
-# - $ZSH_CUSTOM/aliases.zsh
-# - $ZSH_CUSTOM/macos.zsh
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-##### End of Oh My Zsh Autogenerated #####
-
-
-# Automatically configure fnm (Fast Node Manager) to switch Node.js versions based on the current directory.
-eval "$(fnm env --use-on-cd --shell zsh)"
-
-# # Load Powerlevel10k theme dynamically for Zsh prompt customization and appearance.
-# # This enhances the shell prompt with features like icons, git status, and more.
-if [[ -r "$(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" ]]; then
-  source "$(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme"
+# Auto-switch Node versions based on .node-version or .nvmrc
+# Guarded with 'command -v' so the shell doesn't crash if fnm is missing
+if command -v fnm >/dev/null 2>&1; then
+  eval "$(fnm env --use-on-cd --shell zsh)"
 fi
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# ==============================================================================
+# 6. POWERLEVEL10K THEME
+# ==============================================================================
+
+# Load Powerlevel10k from Homebrew if installed
+if command -v brew >/dev/null 2>&1; then
+  if [[ -r "$(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" ]]; then
+    source "$(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme"
+  fi
+fi
+
+# Load your personal P10k config
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-######
+# ==============================================================================
+# 7. USER ALIASES & CUSTOMIZATIONS
+# ==============================================================================
 
-# Symlink created for Android Studio to use fnm-managed Node.js
-# Automatically resolves the current Node.js version managed by fnm
-# ⚠️ This line causes "ln: /usr/local/bin/node: No such file or directory" errors
-# ⚠️ Likely unnecessary with fnm — consider removing it
-# ln -s "$(realpath $(which node))" /usr/local/bin/node
+# Add your personal aliases here
+# alias zshconfig="nvim ~/.zshrc"
+# alias dotfiles="cd $DOTFILES"
+
+# ==============================================================================
+# 8. REFERENCE: OH MY ZSH OPTIONS (Inactive)
+# ==============================================================================
+# Keep these for reference when exploring Oh My Zsh features
+
+# CASE_SENSITIVE="true"                    # Case-sensitive completion
+# HYPHEN_INSENSITIVE="true"                # Hyphen-insensitive completion
+# DISABLE_AUTO_UPDATE="true"               # Disable auto-updates
+# zstyle ':omz:update' frequency 13        # Update frequency (days)
+# DISABLE_MAGIC_FUNCTIONS="true"           # Fix paste issues
+# DISABLE_LS_COLORS="true"                 # Disable ls colors
+# DISABLE_AUTO_TITLE="true"                # Disable auto-setting terminal title
+# ENABLE_CORRECTION="true"                 # Command auto-correction
+# COMPLETION_WAITING_DOTS="true"           # Display dots while waiting
+# DISABLE_UNTRACKED_FILES_DIRTY="true"     # Speed up large repos
+
+# ==============================================================================
+# 9. ANDROID STUDIO NODE.JS FIX (DO NOT ADD TO .zshrc)
+# ==============================================================================
+# ⚠️ If Android Studio can't find Node, run this ONCE manually in terminal:
+# sudo ln -s "$(which node)" /usr/local/bin/node
