@@ -36,13 +36,9 @@ brew update
 brew tap homebrew/bundle
 brew bundle --file ./Brewfile
 
-# Ensure scripts are executable
-chmod +x keyboard-shortcuts.sh
-chmod +x zsh-plugins-setup.sh
-
-# Install Zsh plugins using the script
-echo "Installing Zsh plugins..."
-./zsh-plugins-setup.sh
+# Update Git submodules (for Zsh plugins)
+echo "Updating Git submodules..."
+git submodule update --init --recursive
 
 # Create a projects directories
 mkdir $HOME/dev
