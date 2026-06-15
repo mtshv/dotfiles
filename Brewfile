@@ -48,7 +48,7 @@ cask 'google-chrome'
 cask 'google-gemini'        # Google Gemini Desktop App
 cask 'imageoptim'
 cask 'iterm2'
-cask 'jordanbaird-ice@beta' # Menu bar manager (Bartender alternative)
+cask 'thaw'                 # Menu bar manager
 cask 'pearcleaner'          # Open-source Mac app uninstaller
 cask 'postman'
 cask 'proxyman'             # Inspect network traffic
