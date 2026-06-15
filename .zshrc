@@ -125,3 +125,11 @@ fi
 # ==============================================================================
 # ⚠️ If Android Studio can't find Node, run this ONCE manually in terminal:
 # sudo ln -s "$(which node)" /usr/local/bin/node
+
+# pnpm
+export PNPM_HOME="/Users/mtshv/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
