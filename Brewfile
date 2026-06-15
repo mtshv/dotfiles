@@ -69,17 +69,6 @@ cask 'zoom'
 cask 'zulu@17'              # Java 17 for React Native Android Dev
 
 # ==============================================================================
-# 4. FONTS
-# ==============================================================================
-cask 'font-meslo-for-powerlevel10k'
-# cask 'font-open-sans'
-# cask 'font-roboto'
-# cask 'font-source-code-pro-for-powerline'
-# cask 'font-source-code-pro'
-# cask 'font-source-sans-pro'
-# cask 'font-source-serif-pro'
-
-# ==============================================================================
 # 5. MAC APP STORE
 # ==============================================================================
 mas 'Amphetamine',    id: 937984704
