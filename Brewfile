@@ -6,8 +6,10 @@ brew 'btop'          # Resource monitor with CPU, memory, disk usage
 brew 'duf'           # Better disk usage analyzer
 brew 'eza'           # Modern ls replacement with colors and icons
 brew 'fd'            # Simple, fast alternative to 'find'
+brew 'fzf'           # Command-line fuzzy finder
 brew 'gh'            # GitHub CLI
 brew 'git'           # Distributed version control system
+brew 'jq'            # Lightweight and flexible command-line JSON processor
 brew 'mas'           # Mac App Store manager
 brew 'micro'         # User-friendly terminal text editor
 brew 'ripgrep'       # Better grep (faster, smarter)
@@ -21,6 +23,7 @@ brew 'zoxide'        # Smarter cd command that learns your habits
 brew 'cocoapods'     # iOS/macOS dependency manager
 brew 'fnm'           # Node.js version manager
 brew 'imagemagick'   # Image processing
+brew 'pnpm'          # Fast, disk space efficient package manager
 brew 'powerlevel10k' # Prompt for Zsh
 brew 'watchman'      # File watching for React Native
 brew 'yarn'          # JS package manager
@@ -43,6 +46,7 @@ cask 'google-chrome'
 cask 'imageoptim'
 cask 'iterm2'
 cask 'jordanbaird-ice@beta' # Menu bar manager (Bartender alternative)
+cask 'pearcleaner'          # Open-source Mac app uninstaller
 cask 'postman'
 cask 'proxyman'             # Inspect network traffic
 cask 'send-to-kindle'
