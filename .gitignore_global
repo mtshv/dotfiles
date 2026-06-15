@@ -43,3 +43,4 @@ Thumbs.db
 
 plugins/zsh-autosuggestions/
 plugins/zsh-syntax-highlighting/
+\n# Private Local Configs #\n#########################\n*.local\n.zshrc.local\n

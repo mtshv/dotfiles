@@ -133,3 +133,10 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# ==============================================================================
+# 10. LOCAL/PRIVATE OVERRIDES
+# ==============================================================================
+# Load machine-specific or sensitive overrides (API keys, work paths, etc.)
+# This file is gitignored.
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
