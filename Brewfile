@@ -34,7 +34,9 @@ brew 'yarn'          # JS package manager
 cask '1password'
 cask 'alfred'
 cask 'android-studio'
+cask 'antigravity-cli'      # Antigravity CLI agent
 cask 'claude'               # AI assistant
+cask 'claude-code@latest'   # Claude Code CLI
 cask 'cork'                 # GUI companion app for Homebrew
 cask 'daisydisk'
 cask 'discord'
@@ -43,6 +45,7 @@ cask 'figma'
 cask 'firefox'
 cask 'ghostty'              # Terminal emulator
 cask 'google-chrome'
+cask 'google-gemini'        # Google Gemini Desktop App
 cask 'imageoptim'
 cask 'iterm2'
 cask 'jordanbaird-ice@beta' # Menu bar manager (Bartender alternative)
