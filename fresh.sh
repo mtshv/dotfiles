@@ -23,9 +23,11 @@ if test ! $(which brew); then
 #  eval "$(/opt/homebrew/bin/brew shellenv)"#MacOS silicone
 fi
 
-# Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
-rm -rf $HOME/.zshrc
-ln -sw $HOME/.dotfiles/.zshrc $HOME/.zshrc
+# Back up existing .zshrc (if it exists as a real file) and symlink the dotfiles version
+if [ -f "$HOME/.zshrc" ] && [ ! -L "$HOME/.zshrc" ]; then
+  mv "$HOME/.zshrc" "$HOME/.zshrc.backup"
+fi
+ln -sf "$HOME/.dotfiles/.zshrc" "$HOME/.zshrc"
 
 # Update Homebrew recipes
 brew update
