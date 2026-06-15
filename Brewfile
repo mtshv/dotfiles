@@ -84,4 +84,5 @@ mas 'Monosnap',       id: 540348655
 mas 'Pixelmator Pro', id: 1289583905
 mas 'Remote Mouse',   id: 403195710
 mas 'Things',         id: 904280696
+mas 'Twingate',       id: 1501592214 # Work VPN/Access
 mas 'Xcode',          id: 497799835
