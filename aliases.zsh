@@ -15,17 +15,18 @@ alias library="cd $HOME/Library"
 alias projects="cd $HOME/Code"
 alias sites="cd $HOME/Herd"
 
-# Laravel
-alias a="herd php artisan"
-alias fresh="herd php artisan migrate:fresh --seed"
-alias tinker="herd php artisan tinker"
-alias seed="herd php artisan db:seed"
-alias serve="herd php artisan serve"
-
-# PHP
-alias cfresh="rm -rf vendor/ composer.lock && composer i"
-alias composer="herd composer"
-alias php="herd php"
+# ==============================================================================
+# REFERENCE: PHP & LARAVEL (Inactive)
+# ==============================================================================
+# Keep these for reference if PHP development is needed in the future
+# alias a="herd php artisan"
+# alias fresh="herd php artisan migrate:fresh --seed"
+# alias tinker="herd php artisan tinker"
+# alias seed="herd php artisan db:seed"
+# alias serve="herd php artisan serve"
+# alias cfresh="rm -rf vendor/ composer.lock && composer i"
+# alias composer="herd composer"
+# alias php="herd php"
 
 # JS
 alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
