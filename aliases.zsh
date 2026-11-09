@@ -32,6 +32,10 @@ alias sites="cd $HOME/Herd"
 alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
 alias watch="npm run dev"
 
+# Claude Code
+# `claude` = work account (~/.claude), `claude-personal` = personal account
+alias claude-personal='CLAUDE_CONFIG_DIR=$HOME/.claude-personal claude'
+
 # Docker
 alias docker-composer="docker-compose"
 
